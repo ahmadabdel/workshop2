@@ -14,7 +14,6 @@ from pathlib import Path
 from decouple import config
 import os
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,9 +27,7 @@ SECRET_KEY = 'django-insecure-(j-#aqq@vs$3l#0(031z4_h(_*pa&ye#dt&x69_@(&a6(=+fpg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'ec2-16-16-133-254.eu-north-1.compute.amazonaws.com', '0.0.0.0', 'localhost', '127.0.0.1'
-]
+ALLOWED_HOSTS = ['ec2-52-22-64-156.compute-1.amazonaws.com', '0.0.0.0', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -129,7 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 if DEBUG:
-    STATICFILES_DIRS =[os.path.join(BASE_DIR, "static")]
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 else:
     STATIC_ROOT = [os.path.join(BASE_DIR, "static")]
 
